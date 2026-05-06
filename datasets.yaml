@@ -9,6 +9,10 @@ huggingface:
     split: train[:2%]
     streaming: true
     note: Tiny GLUE stream for CI / dataloader sanity — replace with domain datasets as charters land.
+  - repo_id: stanfordnlp/imdb
+    split: train[:1%]
+    streaming: true
+    note: Small sentiment text stream for tokenizer / pipeline smoke (not a causal benchmark).
 
 kaggle: []
 

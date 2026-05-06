@@ -1,6 +1,6 @@
 # Pillar progress — `research-apriori-causality`
 
-**Overall solution proximity (rubric): ~22%** toward a defensible, preregistered answer for this pillar’s charter.
+**Overall solution proximity (rubric): ~26%** toward a defensible, preregistered answer for this pillar’s charter.
 
 See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PILLAR_PROGRESS.md).
 
@@ -10,8 +10,8 @@ See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https:
 |------|---:|------|
 | Charter + prereg | 35 | Notebooks exist; run cards not yet standard |
 | Layer A / nulls | 15 | Need explicit permutation / bootstrap blocks in notebooks |
-| Reproducibility | 40 | Submodule CI smoke exists; tie notebooks to same seeds |
-| Domain data | 10 | Replace GLUE sanity row in `datasets.yaml` with causal / text streams |
+| Reproducibility | **45** | `runs/smoke.yaml` + CI; wire notebooks to seeds + run cards next |
+| Domain data | **18** | GLUE sanity + `stanfordnlp/imdb` stream pinned in `datasets.yaml` |
 
 ## Links
 
