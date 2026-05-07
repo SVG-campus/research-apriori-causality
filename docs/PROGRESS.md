@@ -12,7 +12,7 @@ See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https:
 |------|---:|------|
 | Charter + prereg | 56 | `docs/PREREG.md` + `METHODS.md` |
 | Layer A / nulls | 42 | Permutation + bootstrap tests; CI includes `CHARTER_LAYER_A_MULTIDRAW_SMOKE` (Hub-free pooled-label permutation) + `CHARTER_CAUSAL_BENCHMARK_SMOKE` (HF stream + y-shuffle null) |
-| Reproducibility | 78 | `runs/smoke.yaml`, `runs/ci_notebooks.yaml`, `methodology_preamble`, pytest + headless CI (**seven** enabled rows: three `SMOKE_*` + `CHARTER_SHELL` + `CHARTER_EXTENDED_LIGHT` + `CHARTER_LAYER_A_MULTIDRAW_SMOKE` + domain stream charter; see `runs/README.md`; disabled `FUTURE_CHARTER_SLOT`) |
+| Reproducibility | 79 | `runs/smoke.yaml`, `runs/ci_notebooks.yaml`, `methodology_preamble`, pytest + headless CI (**seven** enabled rows: three `SMOKE_*` + `CHARTER_SHELL` + `CHARTER_EXTENDED_LIGHT` + `CHARTER_LAYER_A_MULTIDRAW_SMOKE` + domain stream charter; see `runs/README.md`; disabled `FUTURE_CHARTER_SLOT`); `runs/promotion_audit.example.yaml` **`trace_run_ids`** + schema test in CI |
 | Domain data | 38 | `datasets.yaml` pins incl. `syrgkanislab/CausalReasoningBenchmark` + `reference_streams` |
 
 ## Links
