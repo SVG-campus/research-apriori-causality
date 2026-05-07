@@ -8,9 +8,11 @@ On **CI failure**, GitHub Actions uploads `notebooks/`, `runs/`, and `scripts/ci
 
 Optional rows may set `enabled: false` so future charter notebooks stay listed without running in CI until they are stable headless.
 
-**`notebooks/CHARTER_SHELL.ipynb`** (minimal preamble + run card) runs in CI **after** the three `SMOKE_*.ipynb` notebooks (see [`ci_notebooks.yaml`](ci_notebooks.yaml) for order) and **before** `CHARTER_EXTENDED_LIGHT` and the domain stream charter—extend it as the charter grows.
+**`notebooks/CHARTER_SHELL.ipynb`** (minimal preamble + run card) runs in CI **after** the three `SMOKE_*.ipynb` notebooks (see [`ci_notebooks.yaml`](ci_notebooks.yaml) for order) and **before** `CHARTER_EXTENDED_LIGHT`, **`CHARTER_LAYER_A_MULTIDRAW_SMOKE`**, and the domain stream charter—extend it as the charter grows.
 
 **`notebooks/CHARTER_EXTENDED_LIGHT.ipynb`** (synthetic mean + run card) runs next as a light Layer A–shaped check.
+
+**`notebooks/CHARTER_LAYER_A_MULTIDRAW_SMOKE.ipynb`** — synthetic two-sample pooled-label **permutation** null (Hub-free), capped by `runs/smoke.yaml`; runs **before** the domain stream charter row in [`ci_notebooks.yaml`](ci_notebooks.yaml).
 
 **`notebooks/CHARTER_CAUSAL_BENCHMARK_SMOKE.ipynb`** streams [`syrgkanislab/CausalReasoningBenchmark`](https://huggingface.co/datasets/syrgkanislab/CausalReasoningBenchmark) (`causal_queries`) with a capped permutation null on `effect` vs index (charter-shaped, not full ID).
 

@@ -17,6 +17,7 @@ def test_ci_notebooks_config_lists_smoke_paths() -> None:
     assert "SMOKE_IMPORTS.ipynb" in txt
     assert "CHARTER_SHELL.ipynb" in txt
     assert "CHARTER_EXTENDED_LIGHT.ipynb" in txt
+    assert "CHARTER_LAYER_A_MULTIDRAW_SMOKE.ipynb" in txt
     assert "CHARTER_CAUSAL_BENCHMARK_SMOKE.ipynb" in txt
     assert "FUTURE_CHARTER_SLOT.ipynb" in txt
     assert "enabled: false" in txt
@@ -124,6 +125,22 @@ def test_charter_causal_benchmark_notebook_wired() -> None:
         blob_parts.append(src)
     blob = "\n".join(blob_parts)
     assert "charter_causal_benchmark_stream_smoke" in blob and "CausalReasoningBenchmark" in blob
+
+
+def test_charter_layer_a_multidraw_notebook_wired() -> None:
+    p = Path(__file__).resolve().parents[1] / "notebooks" / "CHARTER_LAYER_A_MULTIDRAW_SMOKE.ipynb"
+    assert p.is_file(), f"missing {p}"
+    nb = json.loads(p.read_text(encoding="utf-8"))
+    blob_parts: list[str] = []
+    for c in nb.get("cells", []):
+        if c.get("cell_type") != "code":
+            continue
+        src = c.get("source", "")
+        if isinstance(src, list):
+            src = "".join(src)
+        blob_parts.append(src)
+    blob = "\n".join(blob_parts)
+    assert "charter_layer_a_multidraw_smoke" in blob and "assert_run_card" in blob
 
 
 def test_ci_notebooks_yaml_schema() -> None:
