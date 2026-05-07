@@ -12,6 +12,8 @@ Optional rows may set `enabled: false` so future charter notebooks stay listed w
 
 **`notebooks/CHARTER_EXTENDED_LIGHT.ipynb`** (synthetic mean + run card) runs next as a light Layer A–shaped check.
 
+**`notebooks/CHARTER_CAUSAL_BENCHMARK_SMOKE.ipynb`** streams [`syrgkanislab/CausalReasoningBenchmark`](https://huggingface.co/datasets/syrgkanislab/CausalReasoningBenchmark) (`causal_queries`) with a capped permutation null on `effect` vs index (charter-shaped, not full ID).
+
 **`FUTURE_CHARTER_SLOT.ipynb`** is listed disabled with **no** committed file: replace that row with a real path when you add a heavier charter notebook, verify headless execution locally, then set `enabled: true`.
 
 ## Promotion audit (canonical numbers)

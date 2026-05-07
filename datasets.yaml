@@ -13,6 +13,11 @@ huggingface:
     split: train[:1%]
     streaming: true
     note: NLI-style paired text for multi-input pipeline smoke (not a causal ID benchmark).
+  - repo_id: syrgkanislab/CausalReasoningBenchmark
+    config: causal_queries
+    split: train
+    streaming: true
+    note: Automated Causal Reasoning Benchmark (arXiv:2602.20571); small streaming slice for charter / CI — not a full identification study.
 
 kaggle: []
 
