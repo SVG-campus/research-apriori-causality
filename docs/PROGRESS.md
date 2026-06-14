@@ -1,6 +1,6 @@
 # Pillar progress — `research-apriori-causality`
 
-**Overall solution proximity (rubric v2): ~55%** toward a defensible, preregistered answer for this pillar’s charter.
+**Overall solution proximity (rubric v2): ~59%** toward a defensible, preregistered answer for this pillar’s charter.
 
 Formula (same as meta `docs/PILLAR_PROGRESS.md`): `round(0.30×charter + 0.30×LayerA + 0.25×repro + 0.15×data)` on 0–100 subscores.
 
@@ -10,7 +10,7 @@ See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https:
 
 | Axis | % | Note |
 |------|---:|------|
-| Charter + prereg | 56 | `docs/PREREG.md` + `METHODS.md` |
+| Charter + prereg | 70 | Completed `docs/PREREG.md` for Causal Text Queries null benchmark + `METHODS.md` |
 | Layer A / nulls | 42 | Permutation + bootstrap tests; CI includes `CHARTER_LAYER_A_MULTIDRAW_SMOKE` (Hub-free pooled-label permutation) + `CHARTER_CAUSAL_BENCHMARK_SMOKE` (HF stream + y-shuffle null) |
 | Reproducibility | 79 | `runs/smoke.yaml`, `runs/ci_notebooks.yaml`, `methodology_preamble`, pytest + headless CI (**seven** enabled rows: three `SMOKE_*` + `CHARTER_SHELL` + `CHARTER_EXTENDED_LIGHT` + `CHARTER_LAYER_A_MULTIDRAW_SMOKE` + domain stream charter; see `runs/README.md`; disabled `FUTURE_CHARTER_SLOT`); `runs/promotion_audit.example.yaml` **`trace_run_ids`** + schema test in CI |
 | Domain data | 38 | `datasets.yaml` pins incl. `syrgkanislab/CausalReasoningBenchmark` + `reference_streams` |

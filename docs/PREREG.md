@@ -1,27 +1,30 @@
-# Preregistration template — `research-apriori-causality`
-
+# Preregistration — `research-apriori-causality`
+ 
 **Pillar:** `research-apriori-causality`  
-**Title:** Apriori causality & LLM structures
+**Title:** Causal Text Queries Null Benchmark (ECT-2026-001)
+**Date:** 2026-06-14  
+**ORCID Identifier:** `0009-0004-9601-5617`
 
 ## Charter (one paragraph)
 
-Discover and stress-test causal / compositional structure hypotheses for language and agents.
+Discover and stress-test causal/compositional structure hypotheses for language and agents. This study establishes the baseline null performance for textual feature representations of causal queries. Specifically, it tests whether lexical features of a natural language causal question can act as spurious causal drivers of the physical effect sizes reported in those studies, validating that OCCA's Peter-Clark and Spectral MC engines correctly return empty skeletons for epistemic null controls.
 
 ## Primary question (Layer A)
 
-- **Question:** _What measurable difference do we expect under the stated hypothesis?_
-- **Primary metric:** _e.g. mean delta, AUC, correlation, regret …_
-- **Direction / threshold:** _pre-specify sign or minimal effect size before peeking._
+- **Question:** Do lexical features of a causal query (char_count, token_count, unique_word_ratio, and keyword indicators like "confounding", "mediation", "collider") cause the physical effect size reported in the study?
+- **Expected DAG:** Empty (no directed or undirected edges between textual features and physical effect sizes).
+- **Primary metric:** Directed edges count and information coefficient.
+- **Direction / threshold:** $\alpha = 0.05$ for PC algorithm. The number of discovered directed edges must equal 0. The absolute information coefficient of any nonlinear transformation must not beat the phase-shuffled Spectral MC null ($p > 0.05$).
 
 ## Null / negative controls
 
-- **Null model:** _e.g. y-shuffle, permutation, time-shift, placebo instrument …_
-- **Caps:** read `runs/smoke.yaml` (`n_perm_max`, `n_boot_max`) for local smoke; raise only on Kaggle/HF Jobs with a new `run_id`.
+- **Null model:** Phase-shuffled Spectral Monte Carlo (FFT surrogate paths).
+- **Caps:** Capped at $N = 25$ runs for local smokes (`runs/smoke.yaml`); $N = 1000$ for full remote promotion validation with run ID `charter_causal_text_prereg_run_01`.
 
 ## Truth scope & ethics
 
-- **Scope:** observational / simulated / scenario — _not_ universal causal claims unless design supports it.
-- **Data rights:** cite Hub/Kaggle dataset cards; no redistribution beyond their licenses.
+- **Scope:** Observational NLP metadata analysis. This serves as an epistemic control baseline under the **ECT-2026** standard.
+- **Data rights:** Utilizes query metadata extracted from `syrgkanislab/CausalReasoningBenchmark` (Hugging Face).
 
 ## Promotion rules
 
