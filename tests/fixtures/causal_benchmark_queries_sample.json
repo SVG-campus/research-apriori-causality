@@ -1,14 +1,14 @@
 [
-  {"effect": -0.08, "causal_question": "Synthetic row A: how did outcome X move under treatment T in panel P?"},
-  {"effect": 0.12, "causal_question": "Synthetic row B: estimated ATT for program rollout vs control units."},
-  {"effect": 0.0, "causal_question": "Synthetic row C: null-precision smoke; effect near zero by construction."},
-  {"effect": 1.5, "causal_question": "Synthetic row D: large-magnitude placeholder for numerical spread."},
-  {"effect": -0.33, "causal_question": "Synthetic row E: negative effect placeholder with two decimals."},
-  {"effect": 0.07, "causal_question": "Synthetic row F: small positive effect; IV-style wording only as text."},
-  {"effect": 2.1, "causal_question": "Synthetic row G: bounded synthetic narrative; not a real estimate."},
-  {"effect": -1.2, "causal_question": "Synthetic row H: negative slope placeholder for correlation smoke."},
-  {"effect": 0.45, "causal_question": "Synthetic row I: mid-scale positive synthetic coefficient."},
-  {"effect": -0.01, "causal_question": "Synthetic row J: tiny magnitude for finite-float handling."},
-  {"effect": 0.88, "causal_question": "Synthetic row K: shuffle-null charter uses order vs effect only."},
-  {"effect": -0.56, "causal_question": "Synthetic row L: twelfth row completes twelve-take contract."}
+  {"effect": 0.12, "causal_question": "Does X cause Y under confounding Z?"},
+  {"effect": 0.18, "causal_question": "Mediation path A to B to C"},
+  {"effect": -0.05, "causal_question": "Negative control shuffle"},
+  {"effect": 0.41, "causal_question": "Front-door style split"},
+  {"effect": 0.22, "causal_question": "Instrument strength check"},
+  {"effect": 0.09, "causal_question": "Collider bias warning"},
+  {"effect": 0.55, "causal_question": "High effect subgroup"},
+  {"effect": 0.31, "causal_question": "High effect replicate"},
+  {"effect": 0.28, "causal_question": "High effect replicate 2"},
+  {"effect": 0.19, "causal_question": "Moderate uplift"},
+  {"effect": -0.11, "causal_question": "Null-like draw"},
+  {"effect": 0.75, "causal_question": "Strong positive cell"}
 ]
